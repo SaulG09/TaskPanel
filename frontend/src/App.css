@@ -1,0 +1,264 @@
+body {
+  background-color: rgb(44, 44, 44);
+  font-family: sans-serif;
+}
+
+/* Título */
+.titulo {
+  font-family: "Luckiest Guy";
+  font-size: 40px;
+  margin: 5px;
+  font-weight: lighter;
+  text-align: center;
+  color: #fff;
+}
+
+/* Barra superior (filtros, opciones, etc.) */
+.options {
+  margin: 20px;
+  height: 40px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Botones redondos */
+.btn-round {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  color: rgb(44, 44, 44);
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.btn-add {
+  width: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  color: rgb(44, 44, 44);
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.btn-add:hover,
+.btn-round:hover {
+  background-color: #666;
+  color: #fff;
+}
+
+/* Contenedor de botones */
+.buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Grid de tarjetas */
+.grid {
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 20px;
+}
+
+.grid_completo {
+  margin: 20px;
+  border-radius: 34px;
+  background-color: #ffffff;
+  box-shadow: 4px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Card completada */
+.card.completed,
+.card.uncompleted {
+  font-size: 16px;
+  border-radius: 22px;
+  color: black;
+  box-shadow: 4px 4px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.card.completed {
+  border: solid 5px #4dec72;
+}
+
+.card.uncompleted {
+  border: solid 5px rgb(191, 190, 190);
+}
+
+/* Título de la card */
+.card_titulo {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-size: 20px;
+  font-family: "Luckiest Guy";
+}
+
+/* Texto de la card */
+.text {
+  padding: 0 10px 5px 10px;
+}
+
+.card_footer {
+  margin-top: auto; /* se queda al fondo de la tarjeta */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Barra de prioridad */
+.priority {
+  padding: 5px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.priority.high {
+  background-color: rgb(253, 139, 46);
+  color: #fff;
+}
+
+.priority.medium {
+  background-color: #e3e14c;
+  color: #fff;
+}
+
+.priority.low {
+  background-color: #4decdc;
+  color: #fff;
+}
+
+/* Footer botones */
+.prioridad {
+  background-color: rgb(54, 50, 50);
+  padding: 15px;
+  color: aliceblue;
+  text-align: center;
+}
+
+/* Overlay oscuro */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* fondo negro semi-transparente */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10; /* por encima de otros elementos */
+}
+
+/* Add Task centrado */
+.addTask {
+  background-color: rgb(255, 255, 255);
+  border-radius: 24px;
+  width: 700px;
+  height: auto;
+  box-shadow: 4px 4px rgba(0, 0, 0, 0.1);
+  z-index: 20; /* por encima del overlay */
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  font-family: sans-serif;
+}
+
+/* Campos de formulario */
+.addTask label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.addTask input[type="text"],
+.addTask input[type="date"],
+.addTask input[type="time"],
+.addTask textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+.addTask textarea {
+  resize: none;
+  min-height: 80px;
+  font-family: sans-serif;
+}
+
+.addTask button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  border-radius: 12px;
+  border: none;
+  background-color: rgb(44, 44, 44);
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.addTask button:hover {
+  background-color: #666;
+}
+
+/* Combobox (select) */
+.addTask select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  background-color: #fff;
+  color: #000;
+  cursor: pointer;
+  appearance: none; /* elimina estilo por defecto */
+}
+
+.filter {
+  padding: 10px;
+  width: 150px;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  background-color: #fff;
+  color: #000;
+  cursor: pointer;
+  appearance: none; /* elimina estilo por defecto */
+}
+
+/* Toggle button (checkbox) */
+.addTask .toggle-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.addTask .toggle-container input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
